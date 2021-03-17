@@ -1,0 +1,3005 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* pop-up Search Page */
+
+/* Reduce Size */
+/* .zip-popup {
+  width: 500px;
+  height: 60px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  font: normal normal normal 20px/39px Arial;
+  padding-left: 15px;
+}
+
+.select-container-popup {
+  width: 525px;
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+
+.dropbtn-popup {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 20px;
+  font-family: "Roboto";
+  border: none;
+  cursor: pointer;
+  width: 85%;
+  text-align: left;
+  height: 40px;
+  border: 1px solid #707070;
+} */
+
+.close-button-popup, .close-button-ad {
+  float: left;
+  width: 20px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  height: 20px;
+  color: black;
+  font-size: 34px;
+  position: absolute;
+  z-index: 1;
+  margin-left: 94%;
+}
+
+
+.border-around {
+  border-right: 2px dashed lightgray;
+}
+span.border-around {
+    position: relative;
+    left: 165px;
+}
+/* search.html */
+.current_location-mobile {
+  display: none;
+}
+
+.or-hr {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.or-text {
+  position: absolute;
+  top: 258px;
+  left: 619px;
+  background-color: #d57e1dd9;
+}
+.or-text2 {
+  position: absolute;
+  top: 355px;
+  left: 619px;
+  background-color: #d57e1dd9;
+}
+
+#radius_message {
+  position: fixed;
+  background: #f79425;
+  bottom: 0;
+  z-index: 1000000;
+  color: white;
+  padding: 2px 2%;
+  /* left: 0; */
+  display: none;
+  /* right: 0; */
+  text-align: center;
+  font-size: 15px;
+  margin: 0 37%;
+}
+.current_button_div {
+  width: 660px;
+  background-color: white;
+  margin-left: 28%;
+  border: 1px solid #707070;
+  height: 60px;
+  margin: 0 auto;
+}
+.current_location {
+  font-family: "Roboto" !important;
+  font-size: 20px;
+  float: left;
+  padding-top: 19px;
+  padding-left: 14px;
+}
+.cur_loca_img {
+  width: 38px;
+  float: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.border_location {
+  border-right: 2px dashed lightgray;
+  margin-left: 55%;
+}
+.main {
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0 !important;
+  /* margin-left: 278px; */
+}
+/* CHECKBOX STYLES */
+
+/* Hide the default checkbox */
+.main input[type="checkbox"] {
+  visibility: hidden;
+  position: relative;
+  left: 65px;
+}
+/* Creating a custom checkbox 
+based on demand */
+.geekmark {
+  position: absolute;
+  top: 11px;
+  /* right: 39px; */
+  right: -100px;
+  height: 38px;
+  width: 50px;
+  border: 2px solid darkgray;
+}
+
+/* Specify the background color to be 
+shown when hovering over checkbox */
+.main:hover input ~ .geekmark {
+  background-color: lightgray;
+}
+
+/* Specify the background color to be 
+shown when checkbox is active */
+/* .main input:active ~ .geekmark { 
+    background-color: red; 
+}  */
+
+/* Specify the background color to be 
+shown when checkbox is checked */
+.main input:checked ~ .geekmark {
+  background-color: #d57e1dd9;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.geekmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Display checkmark when checked */
+.main input:checked ~ .geekmark:after {
+  display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and  
+showing only two border to make it look 
+like a tickmark */
+.main .geekmark:after {
+  left: 18px;
+  bottom: 8px;
+  width: 10px;
+  height: 22px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.select-container select {
+  -webkit-appearance: none;
+}
+.select-container {
+  width: 660px;
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+.select-container-in1 {
+  float: left;
+  width: 49%;
+}
+.select-container-in2 {
+  float: right;
+  width: 49%;
+}
+.select_span1 {
+  z-index: 1;
+  position: absolute;
+  color: black;
+  padding-top: 0.3%;
+  padding-left: 1%;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 600;
+}
+.select_span2 {
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 1;
+  padding-top: 0.3%;
+  padding-left: 1%;
+  color: black;
+  position: absolute;
+  font-family: "Roboto";
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 20px;
+  font-family: "Roboto";
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  text-align: left;
+  /* height: 60px; */
+  height: 35px;
+  border: 1px solid #707070;
+}
+
+/* The search field */
+#myInput,
+#myInput2 {
+  box-sizing: border-box;
+  background-image: url("../images/searchicon.png");
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+/* #myInput:focus {outline: 3px solid #ddd;} */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 323px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+.stateDate,
+.cityDate {
+  height: 300px;
+  overflow: auto;
+}
+
+/*END search.html */
+
+.orange-em {
+  color: #f79425;
+  font-weight: bold;
+}
+.link-href {
+  font-weight: bold;
+  text-decoration: underline !important;
+}
+.italic {
+  font-style: italic;
+}
+.paragraph1,
+.paragraph2,
+.paragraph3 {
+  text-align: left;
+  padding-bottom: 2%;
+  letter-spacing: 0px;
+  font: normal normal 300 20px/28px Roboto;
+}
+.paragraph1 {
+  font: normal normal 300 21px/28px Roboto;
+}
+
+.paragraph3 {
+  padding-bottom: 1%;
+}
+.new-heading {
+  color: #f79425;
+  font-size: 45px;
+  font-weight: bold;
+  padding-top: 3%;
+  padding-left: 10%;
+  padding-bottom: 2%;
+  /*     font-weight: 900 !important;
+ */
+}
+.imageSlider {
+  background: #8080806b;
+  opacity: 1;
+  padding: 2em 2em 0em 2em;
+}
+.whatExpect {
+  color: #f79425;
+  font-size: 37px;
+  font-weight: bold !important;
+  margin-top: 10%;
+  margin-bottom: -7%;
+}
+.eartoBrain {
+  color: #5dace3;
+  font-size: 45px;
+  font-weight: 600;
+  margin-top: -14px;
+  margin-left: 30px;
+}
+.sliderLeft {
+  float: left;
+  width: 40%;
+  margin-left: 30px;
+}
+.sliderRight {
+  float: right;
+  width: 40%;
+}
+.imaSlider {
+  width: 88%;
+}
+
+.imageSliderBrainGears {
+  width: 100%;
+}
+.para1 {
+  padding-left: 10%;
+  padding-bottom: 2%;
+}
+.para2 {
+  padding-left: 10%;
+  padding-bottom: 2%;
+}
+.balanceImage1 {
+  padding-top: 65%;
+}
+.playNewalign {
+  left: 165px;
+  position: relative;
+  top: -155px;
+  width: 60px;
+}
+.thrive-image {
+  float: left;
+  width: 40%;
+  padding-left: 10%;
+}
+.featuresOf-thrive {
+  padding: 2% 0%;
+  margin-left: 50%;
+}
+.findAD-cont-4 {
+  background: #f79425 0% 0% no-repeat padding-box;
+  border: 2px solid #ffffff;
+  opacity: 1;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  float: left;
+  /* margin-left: 47%; */
+  margin-top: 8%;
+}
+.findAD-mobile {
+  display: none;
+}
+.findAD-lap {
+  border: 2px solid var(--unnamed-color-ffffff);
+  background: #f79425 0% 0% no-repeat padding-box;
+  border: 2px solid #ffffff;
+  opacity: 1;
+  padding: 10px;
+  color: white;
+  margin: 54px 0;
+  font-size: 20px;
+  float: left;
+}
+
+.headline3-ipad1 {
+  display: none;
+}
+
+.healine3-ipad {
+  display: none;
+}
+
+.map-ear-container {
+  min-width: 1366px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.map-left-container {
+  width: 16%;
+  float: left;
+  overflow-y: scroll;
+  padding: 0% 1% 0% 3%;
+}
+
+.map-right-container {
+  width: 80%;
+  float: left;
+  position: relative;
+}
+
+.zicode_input {
+  border: none;
+}
+
+.other-office-name {
+  font-weight: normal !important;
+}
+
+.selectedmap {
+  background: #f0f0f0;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 17px;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body input,
+body select {
+  font-family: Roboto !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  z-index: 200;
+}
+
+.zip-code {
+  color: #d4d4d4;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.zip_code_con {
+  border: 1px solid #d4d4d4;
+  margin-left: 4px;
+  padding: 2px;
+  background-color: white;
+  font-weight: bolder;
+}
+
+.zip_code_con input {
+  border: transparent;
+}
+
+input {
+  border: transparent;
+}
+
+/* Firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.preffered-office img {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.office-marker {
+  float: left;
+  width: 7%;
+  margin-right: 3%;
+}
+
+.office-address {
+  float: left;
+  width: 88%;
+  margin-right: 2%;
+}
+
+.office-logo {
+  float: left;
+  width: 30%;
+}
+
+.office-address p {
+  margin: 0;
+  text-align: right;
+  color: #d4d4d4;
+  font-size: 15px;
+  margin-right: 10px;
+  margin: 2px 0;
+}
+
+.office-address .office-name {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+}
+
+.preffered-list {
+  border-bottom: 1px solid #cccccc;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.preffered-list-bottom {
+  border-top: 1px solid #cccccc;
+}
+
+p.office-contact-details {
+  color: #65accb;
+  text-decoration: underline;
+}
+
+p.office-contact-details a {
+  color: #65accb;
+  text-decoration: underline;
+}
+
+p.office-address-details {
+  margin: 10px 0;
+}
+
+.preffered-map-list .office-address {
+  float: left;
+  width: 98%;
+  margin-right: 2%;
+}
+
+.preffered-map-list .office-logo {
+  float: left;
+  width: 30%;
+}
+
+p.office-person-name {
+  color: black;
+  font-style: italic;
+}
+
+.navBar {
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  margin: 0px;
+  z-index: 10000;
+  position: relative;
+  padding: 12px 33px;
+}
+
+.home-logo {
+  float: left;
+  margin-left: 30px;
+}
+
+.clear {
+  clear: both;
+}
+
+.find {
+  float: right;
+  font-size: 18px;
+  padding-top: 40px;
+  text-align: left;
+  font: normal normal normal 18px/21px Arial;
+  letter-spacing: 0px;
+  color: #626262;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 27px;
+}
+
+.learn {
+  float: right;
+  font-size: 18px;
+  padding-top: 40px;
+  text-align: left;
+  font: normal normal normal 18px/21px Arial;
+  letter-spacing: 0px;
+  color: #626262;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 27px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.container1 {
+  position: relative;
+}
+
+.container1 .backcground-image {
+  position: absolute;
+}
+
+.container5 .backcground-image {
+  position: absolute;
+}
+
+.container6 .backcground-image {
+  position: absolute;
+}
+
+.headLines {
+  /*     display: none; */
+  background: transparent
+    linear-gradient(
+      89deg,
+      #ffffffe6 0%,
+      #fbfbfb4d 15%,
+      #e4e4e400 30%,
+      #e5e5e500 48%,
+      #80808000 100%
+    )
+    0% 0% no-repeat padding-box;
+  opacity: 1;
+  z-index: 100;
+  position: relative;
+  float: left;
+  /*     width: 46%;
+ */
+  padding: 6%;
+}
+
+p {
+  margin: 0;
+}
+
+.headline1 {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0px;
+  color: #626262;
+  opacity: 1;
+  /*     font-size: 65px;
+ */
+  font-weight: bold;
+}
+
+.video-popup-balancingAct {
+  margin-top: 50px;
+}
+
+.welcome-video-popup {
+  /*         display: none;
+ */
+  margin-top: 50px;
+}
+
+.video-blackforil {
+  display: none;
+}
+
+.video-ipad {
+  display: none;
+}
+
+.video1 {
+  width: 24%;
+  float: left;
+  opacity: 1;
+}
+
+.video2 {
+  display: none;
+  width: 24%;
+  float: left;
+  margin-left: 70px;
+}
+
+.video3 {
+  display: none;
+  width: 24%;
+  float: left;
+  opacity: 1;
+}
+
+.headline3 {
+  float: left;
+  /* padding-left: 44px; */
+  text-align: left;
+  font: normal normal 300 48px/52px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  width: 60%;
+  opacity: 1;
+  margin: 0;
+}
+
+.shade {
+  height: 29px;
+  z-index: 10000;
+  transform: matrix(-1, 0, 0, -1, 0, 0);
+  background: transparent
+    linear-gradient(
+      90deg,
+      var(--unnamed-color-ffffff) 0%,
+      var(--unnamed-color-ffffff) 22%,
+      #ea983e 100%
+    )
+    0% 0% no-repeat padding-box;
+  background: transparent
+    linear-gradient(90deg, #ffffff 0%, #ffffff 22%, #ea983e 100%) 0% 0%
+    no-repeat padding-box;
+  opacity: 1;
+}
+
+.container2 {
+  padding: 3em 0em 1em 4em;
+}
+
+.container2-right {
+  float: left;
+  width: 30%;
+}
+
+.researchers {
+  text-align: left;
+  font: normal normal 300 45px/54px Roboto;
+  font-weight: bold;
+  /* font: normal normal 300 60px/66px Roboto; */
+  letter-spacing: 0px;
+  color: #ea9a41;
+  opacity: 1;
+  padding-bottom: 40px;
+}
+
+.supp1 {
+  font-size: 30px;
+}
+
+.exploring {
+  text-align: left;
+  font: normal normal 300 20px/30px Roboto;
+  /*    font: normal normal 300 24px/32px Roboto;*/
+  letter-spacing: 0px;
+  color: #838383;
+}
+
+.findAD {
+  border: 2px solid var(--unnamed-color-ffffff);
+  background: #f79425 0% 0% no-repeat padding-box;
+  /*     border: 2px solid #FFFFFF;
+ */
+  opacity: 1;
+  padding: 10px;
+  color: white;
+  margin: 54px 0;
+  font-size: 20px;
+  float: left;
+}
+
+.brainLogo {
+  display: none;
+}
+
+.container3 {
+  background: #f0f0f0 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+h1 {
+  left: 34px;
+  width: 410px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #5dace3;
+  font-size: 37px;
+  font-family: "Roboto";
+}
+
+.slider-image-neurology {
+  width: 150px;
+  margin-left: 135px;
+}
+
+.slider-image-alz {
+  padding-top: 3px;
+  width: 200px;
+  margin-left: 110px;
+}
+
+.slider-image-who {
+  width: 159px;
+  margin-left: 138px;
+}
+
+.slider-image-ada {
+  width: 334px;
+  margin-left: 35px;
+}
+
+.slider-image-cda {
+  padding-top: 6px;
+  width: 290px;
+  margin-left: 80px;
+}
+
+.carousel-control-prev {
+  margin-left: -70px;
+  color: blue;
+}
+
+.carousel-control-next {
+  margin-right: -70px;
+  color: blue;
+}
+
+.carousel-indicators {
+  margin-bottom: -73px;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  color: blue;
+}
+.sliderRight .carousel-control-next {
+  margin-right: 0px;
+  color: blue;
+}
+.sliderRight .carousel-indicators {
+  margin-bottom: -30px;
+  margin-left: 0px;
+}
+.sliderRight .carousel-control-prev {
+  margin-left: -71px;
+}
+.american {
+  /* position: absolute; */
+  top: 0px;
+
+  text-align: center;
+
+  color: #5dace3;
+  font-size: 48px;
+  font-family: "Roboto";
+  /* margin: 0; */
+}
+
+.slider-content {
+  text-align: center;
+  font: normal normal normal 24px/32px Roboto;
+  letter-spacing: 0px;
+  color: #6c6c6c;
+  margin-top: 35px;
+}
+.hide-forlp {
+  display: none;
+  text-decoration: underline;
+  font: normal normal medium 24px/32px Roboto;
+  letter-spacing: 0px;
+  color: #f79425;
+  text-transform: uppercase;
+  opacity: 1;
+  border: none;
+  font-size: 20px;
+}
+
+.findAD2 {
+  display: none;
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal medium 24px/32px Roboto;
+  letter-spacing: 0px;
+  color: #f79425;
+  text-transform: uppercase;
+  opacity: 1;
+  border: none;
+  font-size: 20px;
+  margin-top: 13px;
+}
+
+.container4 {
+  padding: 5em;
+  opacity: 1;
+  display: none;
+}
+
+.container4-left {
+  float: left;
+  width: 44%;
+  padding-right: 5%;
+}
+
+.container4-right {
+  float: left;
+  width: 50%;
+}
+
+.group4 {
+  display: none;
+  margin-left: 100px;
+}
+
+.hearing {
+  text-align: left;
+  font: normal normal 300 60px/100px Roboto;
+  letter-spacing: 0px;
+  color: #5dace3;
+}
+.thriveVideo {
+  background: transparent
+    url("../images/Screen Shot 2020-09-11 at 11.54.54 AM.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+}
+
+.thriveTex {
+  position: absolute;
+  top: 520px;
+  left: 1231px;
+  width: 388px;
+  height: 115px;
+  text-align: left;
+  font: normal normal 300 39px/52px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  opacity: 1;
+}
+
+.container5-left {
+  float: left;
+  width: 41%;
+  padding: 12% 8%;
+  position: relative;
+  z-index: 10000;
+}
+
+.container5-right {
+  float: left;
+  width: 50%;
+}
+
+.sub5 {
+  font-size: 30px;
+}
+
+.hearingLoss {
+  color: var(--unnamed-color-ffffff);
+  font: normal normal 300 60px/70px Roboto;
+  letter-spacing: 0px;
+  color: rgb(110, 96, 124);
+  color: #ffffff;
+}
+
+.yourAudiologist {
+  font: normal normal 300 22px/34px Roboto;
+  color: #ffffff;
+  margin: 30px 0;
+}
+
+.btn5 {
+  font-family: Roboto;
+  color: #ffffff;
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #ffffff;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.headLines6 {
+  position: relative;
+  background: #f79425d9 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.remember {
+  display: none;
+  padding: 12% 22%;
+  color: var(--unnamed-color-ffffff);
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+
+.container6 a {
+  display: block;
+  margin-top: 50px;
+}
+
+.btn6 {
+  border: 2px solid var(--unnamed-color-ffffff);
+  border: 2px solid #ffffff;
+  opacity: 1;
+  background: transparent;
+  color: white;
+  padding: 22px 47px;
+  font-size: 20px;
+}
+
+.container7 {
+  padding: 2em;
+  background: #fafafa 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.container7-left {
+  display: none;
+  float: left;
+}
+
+.container7-right {
+  display: none;
+  float: left;
+  width: 37%;
+}
+
+.container7-lap {
+  display: none;
+}
+
+.logo7 {
+  background: transparent url("img/Ear Brain Health Logo.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+}
+
+.how {
+  display: none;
+  text-align: center;
+  font: normal normal 300 42px/55px Roboto;
+  letter-spacing: 0px;
+  color: #f79425;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.btn7 {
+  display: none;
+  background: #f79425 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #f79425;
+  opacity: 1;
+  margin-top: 26px;
+  display: block;
+  width: 100%;
+}
+
+.learnBT {
+  color: var(--unnamed-color-ffffff);
+  text-align: center;
+  font: normal normal normal 32px/43px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+  display: block;
+}
+
+.container8 {
+  background: white;
+  opacity: 1;
+  padding: 5em;
+}
+
+.footImage p {
+  margin-top: 30px;
+  text-align: center;
+  font: normal normal normal 26px/30px SignPainter;
+}
+
+.journal {
+  text-align: center;
+  font: normal normal 300 18px/24px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  font-size: 18px;
+}
+
+.footImage {
+  background: transparent url("img/Screen Shot 2020-09-09 at 4.13.33 PM.png") 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+  width: 100%;
+}
+
+/*search pages */
+
+.searchnavBar {
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 173px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+
+.sLearn {
+  float: right;
+  font-size: 18px;
+  padding-top: 40px;
+  width: 210px;
+  height: 22px;
+  text-align: left;
+  font: normal normal normal 18px/21px Arial;
+  letter-spacing: 0px;
+  color: #f79425;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.sFind {
+  float: right;
+  font-size: 18px;
+  padding-top: 40px;
+  width: 210px;
+  height: 22px;
+  text-align: left;
+  font: normal normal normal 18px/21px Arial;
+  letter-spacing: 0px;
+  color: #f79425;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.container-search {
+  position: relative;
+}
+
+.container-search .backcground-image {
+  position: absolute;
+}
+
+/* Bottom right text */
+
+.text-block {
+  display: none;
+  top: 0px;
+  position: absolute;
+  background: #d57e1dd9 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
+p.cognive-Preferred-office-btn,
+p.cognive-other-office-btn {
+  background: #f79425 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding: 9px 0;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 7px;
+  cursor: pointer;
+  text-align: center;
+}
+
+p.cognive-other-office-label {
+  color: #d57e1dd9;
+  text-align: center;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: 1px solid #d4d4d4;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.container8 {
+  background: white;
+  opacity: 1;
+  padding: 1em;
+}
+
+.footImage p {
+  margin-top: 30px;
+  text-align: center;
+  font: normal normal normal 26px/30px SignPainter;
+}
+
+.journal {
+  text-align: center;
+  font: normal normal 300 18px/24px Roboto;
+  letter-spacing: 0px;
+  color: #969696;
+  font-size: 18px;
+}
+
+.footImage {
+  background: transparent url("img/Screen Shot 2020-09-09 at 4.13.33 PM.png") 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+  width: 100%;
+}
+
+.searFTImage {
+  top: 1079px;
+  left: 0px;
+  width: 1920px;
+  height: 420px;
+  opacity: 1;
+}
+
+.notfind-container {
+  position: absolute;
+  top: 173px;
+  left: 0px;
+  width: 1920px;
+  height: 906px;
+  background: #292929 0% 0% no-repeat padding-box;
+  opacity: 1;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.notfind-pop {
+  position: absolute;
+  top: 324px;
+  left: 539px;
+  width: 843px;
+  height: 579px;
+  background: #f79625 0% 0% no-repeat padding-box;
+  box-shadow: 0px 25px 40px #00000029;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+
+.nothead {
+  position: absolute;
+  top: 379px;
+  left: 554px;
+  width: 806px;
+  height: 88px;
+  color: var(--unnamed-color-ffffff);
+  text-align: center;
+  font: normal normal normal 94px/90px SignPainter;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.urAudiologist {
+  position: absolute;
+  top: 480px;
+  left: 629px;
+  width: 660px;
+  height: 84px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.map-right-container .findAD {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  right: 54px;
+  bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0;
+}
+
+/*popup*/
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f79425;
+  padding: 1rem;
+  width: 40rem;
+}
+
+.close-button,
+.close-button-ad {
+  float: left;
+  width: 20px;
+  line-height: 19px;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  height: 20px;
+  color: white;
+  font-size: 34px;
+}
+
+.close-button:hover,
+.close-button-ad:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  z-index: 10000;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 10000;
+}
+
+.dialog-bg {
+  padding: 12px;
+  margin-top: 25px;
+}
+
+.dialog-title {
+  font: normal normal normal 40px/50px SignPainter;
+  color: white;
+  text-align: center;
+}
+
+.dialog-border {
+  width: 100%;
+  margin: 8px 0px;
+}
+
+.dialog-border input {
+  width: 96%;
+  display: block;
+  padding: 2%;
+  font-size: 20px;
+  font: normal normal normal 20px/26px Roboto;
+}
+
+.dialog-border input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d4d4d4;
+  opacity: 0.5;
+  /* Firefox */
+}
+
+.dialog-bg label {
+  font: normal normal normal 20px/26px Roboto;
+  color: white;
+}
+
+.dialog-bg .submit {
+  border: 2px solid var(--unnamed-color-ffffff);
+  border: 2px solid #ffffff;
+  opacity: 1;
+  background: transparent;
+  color: white;
+  padding: 15px 58px;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.footer__container {
+  padding: 20px 0;
+}
+
+.row {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footer__logo {
+  margin: 0 auto;
+}
+
+.container8 .logo {
+  display: block;
+  width: 100%;
+  height: 69px;
+}
+
+.container8 nav {
+  margin: 0 auto;
+}
+
+.footer__list {
+  list-style: none;
+  margin: 20px 0 0 0;
+}
+
+.footer__list li {
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  margin: 0 11px;
+}
+
+.footer__list li:not(:first-child):before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 1px;
+  height: 15px;
+  width: 1px;
+  background: #333;
+}
+
+.nav--social {
+  margin: 50px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav--social li {
+  margin: 0 9px;
+  border-radius: 50%;
+}
+
+nav li {
+  display: inline-block;
+}
+
+.bg--gradient {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#31c4f2),
+    to(#1673b8)
+  );
+  background: linear-gradient(#31c4f2, #1673b8);
+  padding: 2px;
+}
+
+.hidden,
+.seoOnly {
+  display: none !important;
+}
+
+.icon-youtube:before {
+  content: "\e904";
+}
+
+.footer__fda {
+  background: url(../images/logo-fda.png);
+  width: 61px;
+  height: 37px;
+  display: block;
+}
+
+.nav--social a {
+  font-size: 22px;
+  width: 36px;
+  height: 34px;
+  color: #1673b8;
+  padding: 2px 0 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.nav--social a:hover {
+  color: #1673b8;
+}
+
+nav a {
+  display: block;
+}
+
+.accordion--classic__title:after,
+.accordion__trigger:before,
+.btn:after,
+.menu-item-has-children > a:after,
+.sub-menu a:after,
+[class*=" icon-"],
+[class^="icon-"] {
+  font-family: "icons" !important;
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.find {
+  float: right;
+  font-size: 18px;
+  padding-top: 40px;
+  text-align: left;
+  font: normal normal normal 18px/21px Arial;
+  letter-spacing: 0px;
+  color: #626262;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 27px;
+}
+
+.findsearch {
+  float: right;
+  font-size: 18px;
+  padding-top: 40px;
+  text-align: left;
+  font: normal normal normal 18px/21px Arial;
+  letter-spacing: 0px;
+  color: #626262;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 27px;
+  color: #f79425;
+}
+
+/* New CSS for Search*/
+
+.head {
+  margin-top: 16px;
+  color: var(--unnamed-color-ffffff);
+  text-align: center;
+  /* font: normal normal normal 94px/90px SignPainter; */
+  font: normal normal normal 85px/90px SignPainter;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  font-family: "SignPainter";
+}
+
+.name-container {
+  margin-bottom: 6px;
+}
+
+.email-container,
+.zip-container {
+  margin-bottom: 6px;
+}
+
+.name {
+  width: 660px;
+  height: 84px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  font: normal normal normal 34px/39px Arial;
+  padding-left: 15px;
+  color: #cbcbcb;
+}
+
+.email {
+  width: 660px;
+  height: 84px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  font: normal normal normal 34px/39px Arial;
+  padding-left: 15px;
+  color: #cbcbcb;
+}
+
+.zip {
+  width: 660px;
+  height: 60px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  font: normal normal normal 20px/39px Arial;
+  
+  /*     color: #CBCBCB;
+ */
+}
+
+.search-button {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.searchBTN {
+  width: 660px;
+  height: 80px;
+  color: white;
+  background: #d57e1dd9 0% 0% no-repeat padding-box;
+  border: 2px solid var(--unnamed-color-ffffff);
+  border: 2px solid #ffffff;
+  opacity: 1;
+  font: normal normal 300 36px/48px Roboto;
+}
+
+.sponsored {
+  margin-top: 200px;
+  font-size: 39px;
+  text-align: center;
+  font: normal normal normal 39px/46px SignPainter;
+  letter-spacing: 0px;
+  color: #696969;
+  opacity: 1;
+}
+
+.searFTImage {
+  margin-top: 100px;
+  width: 1920px;
+  height: 320px;
+  opacity: 1;
+}
+
+.other-audiology-checkbox {
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+input[type="checkbox"]:checked:after {
+  background: green !important;
+  color: black !important;
+}
+
+.copy-url {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* #myInput {
+    text-align: center;
+    padding: 6px;
+} */
+#myInput,
+#myInput2 {
+  width: 320px;
+  text-align: left;
+}
+
+.ipad {
+  display: none;
+}
+
+/* Media Queries */
+
+/*     @media (max-width: 550px) {} */
+
+/* Extra small devices (phones, 600px and down)
+    and (min-width: 300px)
+    */
+
+/* 
+@media (max-width: 500px)
+@media only screen and (max-width: 500px)
+ */
+
+/* Small devices (portrait tablets and large phones, 600px and up)
+    
+    @media only screen and (min-width: 600px) {} */
+
+/* @media (min-width: 481px) and (max-width: 767px)  */
+
+@media only screen and (min-width: 768px) {
+  #radius_message {
+    margin: 0 38%;
+  }
+  .ear-container {
+    min-width: 768px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+  .container1 {
+    background-image: url(../ipad/iPadMotherDaughter.png);
+    background-size: 100% 100%;
+  }
+  .headLines {
+    display: inline;
+    width: 70%;
+  }
+  .headline1 {
+    font: normal normal 300 72px/95px Roboto;
+  }
+  .headline2mobile {
+    display: none;
+  }
+  .headline2 {
+    margin-top: 50px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ea983e;
+    opacity: 1;
+    font-weight: bold;
+    font: normal normal normal 47px/66px Roboto;
+  }
+  .video-popup-balancingAct {
+    margin-top: 40px;
+  }
+  .playNew {
+    left: 60px;
+    position: relative;
+    top: 37px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .container2-left {
+    text-align: center;
+    width: 70%;
+    padding-right: 5%;
+    margin-left: 80px;
+  }
+  .video3 {
+    display: none;
+  }
+  .container3 {
+    text-align: -webkit-center;
+  }
+  .major {
+    display: none;
+  }
+  .majorlap {
+    text-align: center;
+    font: normal normal 300 52px/68px Roboto;
+    letter-spacing: 0px;
+    color: #5dace3;
+    opacity: 1;
+  }
+  .hide-forlp {
+    display: inline;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container3-left {
+    width: 100%;
+  }
+  .slideContainer {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 50px #00000029;
+    opacity: 1;
+    width: 440px;
+    padding: 52px 22px;
+  }
+  .slider-content,
+  .slider-image-neurology,
+  .slider-image-ada,
+  .slider-image-alz,
+  .slider-image-cda,
+  .slider-image-who {
+    margin-left: 0;
+  }
+  .container4 {
+    display: inline;
+    padding: 0px;
+  }
+  .container4-left {
+    width: 44%;
+  }
+  .container4-right {
+    width: 50%;
+  }
+  .group4 {
+    display: inline;
+    width: 300px;
+    margin-left: 10px;
+  }
+  .hearing {
+    font: normal normal 300 50px/45px Roboto;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #5dace3;
+  }
+  .urAD {
+    margin-top: 20px;
+    text-align: left;
+    font: normal normal normal 17px/23px Roboto;
+    letter-spacing: 0px;
+    color: #6c6c6c;
+  }
+  .video-ipad {
+    display: inline;
+    background: transparent url("img/Screen Shot 2020-09-11 at 11.54.54 AM.png")
+      0% 0% no-repeat padding-box;
+  }
+  .welcome-video-popup {
+    /* display: none; */
+    margin-top: 50px;
+    margin-bottom: 11%;
+  }
+  .video2 {
+    display: inline;
+  }
+  .headline3 {
+    display: none;
+  }
+  .headline3-ipad1 {
+    display: block;
+    float: unset;
+    font: normal normal 300 32px/45px Roboto;
+    color: #969696;
+    letter-spacing: 0px;
+    padding-left: 199px;
+    opacity: 1;
+    margin: 0;
+    text-align: left;
+    width: unset;
+  }
+  .healine3-ipad {
+    display: block;
+    float: unset;
+    font: normal normal 300 23px/45px Roboto;
+    color: #969696;
+    letter-spacing: 0px;
+    padding-left: 199px;
+    opacity: 1;
+    margin: 0;
+    text-align: left;
+    width: unset;
+  }
+  .healine3_forlap {
+    display: inline;
+  }
+  .container5 {
+    background-image: url(../ipad/Asset1.png);
+    background-size: 100% 100%;
+    border: 1px solid #707070;
+    opacity: 1;
+  }
+  .container6 {
+    background: url(../ipad/cognivue_Map.png);
+    background-size: 100% 100%;
+  }
+  .container7-left {
+    display: inline;
+    width: 100%;
+    text-align: center;
+  }
+  .container7-lap {
+    display: inline;
+    text-align: center;
+  }
+  .headLines6 {
+    display: flex;
+  }
+  .remember {
+    display: block;
+    font: normal normal normal 94px/90px SignPainter;
+  }
+  .how {
+    display: inline;
+    text-align: center;
+  }
+  .btn7 {
+    display: inline;
+    margin-left: 50px;
+    width: 50%;
+  }
+  .container-search {
+    background-image: url(../ipad/cognivue_Map.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+    text-align: center;
+    opacity: 1;
+    /*             background: #D57E1DD9 0% 0% no-repeat padding-box;
+ */
+  }
+  .text-block {
+    display: block;
+  }
+  .map-ear-container {
+    min-width: 768px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .map-right-container .findAD {
+    display: inline;
+  }
+  .logo-forMobile {
+    display: none;
+  }
+}
+
+/*@media (min-width: 768px) and (max-width: 1024px)*/
+
+@media only screen and (min-width: 992px) {
+  .container1 {
+    background-image: url(../images/HomeMotherDaughter2.png);
+  }
+  .headLines {
+    display: inline;
+    width: 46%;
+  }
+  .headline2mobile {
+    display: none;
+  }
+  .headline2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+    font: normal normal normal 50px/66px Roboto;
+    letter-spacing: 0px;
+    color: #ea983e;
+    opacity: 1;
+    font-weight: bold;
+  }
+  .video-popup-balancingAct {
+    display: inline;
+  }
+  .playNew {
+    left: 60px;
+    position: relative;
+    top: 37px;
+    width: 42px;
+    height: 42px;
+  }
+  .healine3-mobile {
+    display: none;
+  }
+  .headline3 {
+    display: none;
+  }
+  .headline3-ipad1 {
+    float: left;
+    text-align: left;
+    font: normal normal 300 35px/48px Roboto;
+    letter-spacing: 0px;
+    color: #969696;
+    width: 42%;
+    opacity: 1;
+    margin: 0;
+    padding-left: 44px;
+  }
+  .headline3-ipad1 {
+    float: left;
+    text-align: left;
+    font: normal normal 300 35px/48px Roboto;
+    letter-spacing: 0px;
+    color: #969696;
+    width: 42%;
+    opacity: 1;
+    margin: 0;
+    padding-left: 44px;
+  }
+  .container2-left {
+    float: left;
+    width: 65%;
+    margin-left: 0px;
+  }
+  .brainLogo {
+    display: inline;
+    visibility: visible;
+    width: 75%;
+  }
+  .majorlap {
+    display: none;
+  }
+  .major {
+    display: inline;
+    text-align: left;
+    font: normal normal 300 90px/100px Roboto;
+    letter-spacing: 0px;
+    color: #5dace3;
+    opacity: 1;
+  }
+  .findAD2 {
+    display: inline;
+  }
+  .hide-forlp {
+    display: none;
+  }
+  .video2 {
+    display: none;
+  }
+  .container3 {
+    padding: 5em;
+  }
+  .container3-left {
+    float: left;
+    width: 44%;
+    padding-right: 5%;
+  }
+  .container3-right {
+    float: right;
+    width: 43%;
+  }
+  .slideContainer {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 50px #00000029;
+    opacity: 1;
+    width: 440px;
+    padding: 52px 22px;
+    margin-left: 0px;
+  }
+  .container4 {
+    display: inline;
+  }
+  .container4-left {
+    float: left;
+    width: 60%;
+    margin-bottom: 30px;
+  }
+  .container4-right {
+    float: left;
+    width: 20%;
+  }
+  .group4 {
+    display: inline;
+    margin-left: 100px;
+    width: 400px;
+  }
+  .ipad {
+    display: none;
+  }
+  .hearing {
+    text-align: left;
+    font: normal normal 300 60px/100px Roboto;
+    letter-spacing: 0px;
+    color: #5dace3;
+  }
+  .hearingLoss {
+    text-align: left;
+  }
+  .urAD {
+    color: #6c6c6c;
+    font: normal normal normal 24px/32px Roboto;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .welcome-video-popup {
+    display: inline;
+  }
+  .video-ipad {
+    display: none;
+  }
+  .video3 {
+    display: none;
+  }
+  .healine3_forlap {
+    display: none;
+  }
+  .container5 {
+    background: url(../images/Asset1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .container5-left {
+    padding: 6% 8%;
+  }
+  .container6 {
+    background: url(../images/cognivue_Map.png);
+    background-size: 100% 100%;
+  }
+  .remember {
+    display: block;
+    font: normal normal normal 94px/90px SignPainter;
+    padding: 5% 22%;
+  }
+  .container7-left {
+    display: inline;
+  }
+  .container7-right {
+    display: inline;
+  }
+  .container7-lap {
+    display: none;
+  }
+  .how {
+    display: inline;
+  }
+  .btn7 {
+    display: inline;
+  }
+  .seach-container {
+    max-width: 1920px;
+  }
+  .container-search {
+    text-align: center;
+    background-image: url(../images/Container\ 6\ -\ Map.png);
+    background-size: 100% 100%;
+  }
+  .map-ear-container {
+    min-width: 1366px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .map-right-container .findAD {
+    display: inline;
+  }
+}
+
+.logo-img {
+  height: fit-content;
+}
+
+/* admin-content */
+
+.admin-content {
+  background-color: #1882ac;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 3em;
+}
+
+.admin-content .dialog-title {
+  text-align: left;
+}
+
+.admin-section {
+  border: 1.2px solid #288fdb;
+  border-radius: 13px;
+}
+
+.admin-section-header p {
+  color: #288fdb;
+  float: left;
+  text-align: center;
+}
+
+.admin-section-header p:nth-child(1) {
+  width: 5%;
+}
+
+.admin-section-header p:nth-child(2) {
+  width: 27%;
+}
+
+.admin-section-header p:nth-child(3) {
+  width: 20%;
+}
+
+.admin-section-header p:nth-child(4) {
+  width: 20%;
+}
+
+.admin-section-header p:nth-child(5) {
+  width: 28%;
+}
+
+.admin-section-body p {
+  color: #000000;
+  float: left;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.admin-section-body {
+  border-top: 1.2px solid #288fdb;
+}
+
+.admin-section-body p:nth-child(1) {
+  width: 5%;
+  text-align: center;
+}
+
+.admin-section-body p:nth-child(2) {
+  width: 27%;
+}
+
+.admin-section-body p:nth-child(3) {
+  width: 20%;
+}
+
+.admin-section-body p:nth-child(4) {
+  width: 20%;
+}
+
+.admin-section-body p:nth-child(5) {
+  width: 28%;
+}
+
+.admin-content .dialog-bg {
+  padding: 12px;
+  margin-top: 32px;
+  background: white;
+  border-radius: 0.5rem;
+}
+
+.admin-content .dialog-title {
+  padding: 12px;
+  text-align: left;
+  font-size: 34px;
+  color: #000000;
+}
+
+/* Media Query for Mobile Devices */
+
+@media (max-width: 480px) {
+
+  .close-button-popup, .close-button-ad {
+    float: left;
+    width: 20px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    height: 20px;
+    color: black;
+    font-size: 34px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 84%;
+}
+
+  .container1 {
+    background: transparent
+      url("../iphone/iPhone\ X\,\ XS\,\ 11\ Pro\ –\ 375X812\ Mother\ &\ Daughter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .navBar {
+    text-align: center;
+  }
+  .headLines {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3%;
+    padding-bottom: 0%;
+  }
+  .headline1 {
+    margin-top: 30px;
+    font: normal normal 300 68px/68px Roboto;
+  }
+  .home-logo {
+    margin-bottom: 5%;
+    float: none;
+    margin-left: 0;
+  }
+  .headline2 {
+    display: none;
+  }
+  .video-popup-balancingAct {
+    margin-top: 7%;
+  }
+  .headline2mobile {
+    margin-top: 20px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ea983e;
+    opacity: 1;
+    font-weight: bold;
+    font: normal normal normal 42px/46px Roboto;
+  }
+  .headline3 {
+    margin-bottom: 20px;
+    margin-top: 180px;
+    font: normal normal 500 18px/40px Roboto;
+    letter-spacing: 0px;
+    color: #969696;
+    width: 87%;
+    opacity: 1;
+    text-align: center;
+    padding-left: 15px;
+    font-weight: 600;
+  }
+
+  .balanceImage {
+    width: 87%;
+  }
+  .playNew {
+    left: 175%;
+    position: relative;
+    top: 130px;
+    width: 60%;
+  }
+  .container2 {
+    padding: 1em 2em 1em 2em;
+  }
+  .container3-right {
+    text-align: center;
+  }
+  .researchers {
+    padding-bottom: 2%;
+  }
+  .exploring {
+    font: normal normal 300 20px/28px Roboto;
+  }
+  .findAD {
+    background: #f79425 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 12%;
+    padding-left: 9%;
+    color: white;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .majorlap {
+    display: none;
+  }
+  .major {
+    display: inline;
+    font: normal normal 300 52px/68px Roboto;
+    color: #5dace3;
+    text-align: center;
+    letter-spacing: 0px;
+    margin-bottom: 30px;
+    opacity: 1;
+  }
+  .container3-left {
+    margin-left: 11%;
+    width: 83%;
+    margin-top: 3%;
+  }
+  .slideContainer {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 50px #0e0c0c29;
+    opacity: 1;
+    width: 90%;
+    padding: 7% 2%;
+  }
+  .hide-forlp {
+    display: inline;
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    font-weight: 600;
+  }
+  .group4 {
+    margin-left: 27%;
+    width: 50%;
+  }
+  .hearing {
+    font: normal normal 400 35px/70px Roboto;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #5dace3;
+  }
+  .container4 {
+    display: inline;
+    padding: 0%;
+  }
+  .container4-left {
+    float: unset;
+    width: 90%;
+  }
+  .container4-right {
+    float: unset;
+    width: 87%;
+    margin-left: 6%;
+  }
+  .container5 {
+    background-image: url(../iphone/Asset1.png);
+    background-size: cover;
+  }
+  .container5-left {
+    padding: unset;
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 80%;
+  }
+  .hearingLoss {
+    line-height: 57px;
+    font: normal normal 300 45px/50px Roboto;
+  }
+  .btn5 {
+    font-size: 16px;
+    margin-bottom: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .remember {
+    display: block;
+    font: normal normal normal 59px/60px SignPainter;
+    padding: 9% 9%;
+  }
+  .container6 {
+    background-image: url("../iphone/cognivue_Map.png");
+    background-size: cover;
+  }
+  .btn6 {
+    font-size: 18px;
+    padding: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .container7 {
+    padding: 8%;
+  }
+  .container7-left {
+    display: inline;
+  }
+  .logo7 {
+    display: none;
+  }
+  .logo-forMobile {
+    width: 40%;
+    margin-left: 30%;
+  }
+  .container8 {
+    padding: 1em;
+  }
+
+  .find {
+    padding-bottom: 2%;
+    float: none;
+  }
+  h1 {
+    width: 100%;
+  }
+  .slider-image-neurology {
+    margin-left: 25%;
+  }
+  .slider-image-who {
+    margin-left: 25%;
+  }
+  .slider-image-ada {
+    width: 80%;
+  }
+  .slider-image-alz {
+    margin-left: 17%;
+  }
+  .slider-image-cda {
+    margin-left: 3%;
+  }
+  /*END OF SLIDER*/
+  .container-search {
+    background: #d57e1dd9 0% 0% no-repeat padding-box;
+    background-image: url(../iphone/cognivue_Map.png);
+    display: flex;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    position: relative;
+  }
+  .text-block {
+    display: inline;
+    position: relative;
+    text-align: center;
+  }
+  .head {
+    font: normal normal normal 40px/90px SignPainter;
+    /* margin-top: 8%; */
+    margin-top: 0%;
+  }
+  .name,
+  .email,
+  .zip,
+  .searchBTN {
+    font: normal normal normal 19px/39px Arial;
+    height: 60px;
+    width: 75%;
+  }
+  .searchBTN {
+    margin-bottom: 15%;
+  }
+  .findsearch {
+    padding-bottom: 2%;
+    float: none;
+    /* padding-right: 22%;
+        padding-bottom: 2%; */
+  }
+  .name,
+  .email,
+  .zip {
+    color: black;
+  }
+  .dialog-bg label {
+    font: normal normal normal 17px/26px Roboto;
+  }
+  .dialog-bg .submit {
+    float: none;
+    margin-top: 20px;
+  }
+
+  /*NEW EDITS*/
+  .new-heading {
+    color: #f79425;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-bottom: 2%;
+    line-height: 36px;
+  }
+  .thrive-image {
+    width: 100%;
+    padding-left: 10%;
+  }
+  .featuresOf-thrive {
+    padding: 2% 0%;
+    margin-left: 15%;
+    float: left;
+  }
+  .whatExpect {
+    color: #f79425;
+    font-size: 33px;
+    font-weight: bold !important;
+    margin-bottom: -15%;
+  }
+  .balanceImage1 {
+    width: 415%;
+    padding-top: 65%;
+  }
+  .eartoBrain {
+    color: #5dace3;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-top: -20px;
+    margin-left: 0px;
+  }
+  .findAD-lap {
+    display: none;
+  }
+  .findAD-mobile {
+    display: inline;
+    background: #f79425 0% 0% no-repeat padding-box;
+    border: #8080806b;
+    opacity: 1;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    color: white;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .sliderLeft {
+    float: left;
+    width: 100%;
+    margin-left: 0px;
+    padding-bottom: 8%;
+  }
+  .sliderRight {
+    float: left;
+    width: 115%;
+    padding-bottom: 8%;
+  }
+  .sliderRight .carousel-control-prev {
+    margin-left: -48px;
+  }
+  .researchers {
+    text-align: left;
+    font: normal normal 300 33px/45px Roboto;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #ea9a41;
+    opacity: 1;
+    padding-bottom: 8px;
+  }
+  .paragraph1 {
+    font: normal normal 300 18px/28px Roboto;
+  }
+  .paragraph2 {
+    font: normal normal 300 18px/28px Roboto;
+  }
+  .paragraph3 {
+    font: normal normal 300 18px/28px Roboto;
+  }
+  /*New*/
+  .findAD-cont-4 {
+    display: inline;
+    background: #f79425 0% 0% no-repeat padding-box;
+    border: 2px solid #ffffff;
+    opacity: 1;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 10%;
+    padding-left: 10%;
+    color: white;
+    margin: 5px 0;
+    font-size: 18px;
+    margin-top: -12%;
+    margin-bottom: 5%;
+  }
+  .youtube-link-dark {
+    position: relative;
+    bottom: 40px;
+  }
+  .playNewalign {
+    left: 145px;
+    position: relative;
+    top: -105px;
+    width: 60px;
+  }
+
+  /* searchbutton css */
+  .select-container-in1 {
+    float: none;
+    width: 75%;
+    display: block;
+    margin: 14px auto;
+  }
+
+  .select-container {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .select-container-in2 {
+    float: none;
+    width: 75%;
+    display: block;
+    margin: 14px auto;
+  }
+
+  .current_button_div {
+    width: 75%;
+    height: 60px;
+    background-color: white;
+    margin-left: 28%;
+    border: 1px solid #707070;
+    margin: 0 auto;
+  }
+  .cur_loca_img {
+    width: 40px;
+    float: left;
+    padding-left: 5px;
+    padding-top: 11px;
+    padding-right: 5px;
+  }
+
+  .dropbtn {
+    height: 35px;
+    font-size: 20px;
+  }
+  .select_span1 {
+    padding-left: 16px;
+    font-size: 14px;
+  }
+  .select_span2 {
+    padding-left: 16px;
+    font-size: 14px;
+    z-index: 1;
+  }
+  .dropdown-content {
+    min-width: 310px;
+  }
+  #myInput,
+  #myInput2 {
+    width: 309px;
+  }
+  .or-text {
+    position: absolute;
+    top: 190px;
+    left: 175px;
+  }
+  .or-text2 {
+    position: absolute;
+    top: 360px;
+    left: 195px;
+  }
+  /* .current_button_div{
+          display: none;
+      } */
+  .current_location {
+    display: none;
+  }
+  .current_location-mobile {
+    display: inline;
+    font-size: 15px;
+    float: left;
+    padding-top: 13px;
+  }
+  .border_location {
+    margin-left: 5px;
+  }
+
+  .geekmark {
+    position: absolute;
+    left: -120%;
+    top: 42px;
+    width: 280%;
+  }
+  .main {
+    padding: 31px 0 0 !important;
+  }
+  .main .geekmark:after {
+    left: 15px;
+  }
+  .dropdown-content {
+    z-index: 2;
+  }
+  #radius_message {
+    margin: 0 15%;
+  }
+  .border_location {
+    display: none;
+  }
+  .border-around{
+      display: none;
+  }
+}
+
+/*IPHONE SE 1*/
+
+@media (max-width: 375px) {
+  .border_location {
+    display: none;
+  }
+  .border-around{
+      display: none;
+  }
+  .geekmark {
+    position: absolute;
+    width: 280%;
+    left: -110%;
+    top: 42px;
+  }
+
+  #radius_message {
+    margin: 0 10%;
+  }
+  .navBar {
+    text-align: center;
+  }
+  .headline1 {
+    margin-top: 30px;
+    font: normal normal 300 50px/68px Roboto;
+  }
+  .headline2mobile {
+    font: normal normal normal 35px/40px Roboto;
+  }
+  .headLines {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+  .find {
+    padding-bottom: 2%;
+    float: none;
+  }
+  .home-logo {
+    margin-bottom: 5%;
+    float: none;
+    margin-left: 0;
+  }
+  .researchers {
+    font: normal normal 300 30px/40px Roboto;
+  }
+  .exploring {
+    font: normal normal 300 18px/26px Roboto;
+  }
+  .findAD {
+    font-size: 17px;
+    padding-right: 13%;
+  }
+  .major {
+    font: normal normal 300 40px/55px Roboto;
+  }
+  .playNew {
+    left: 175%;
+    position: relative;
+    top: 125px;
+    width: 60%;
+  }
+  .hearingLoss {
+    font: normal normal 300 45px/50px Roboto;
+  }
+  .playNewalign {
+    left: 120px;
+    position: relative;
+    top: -85px;
+    width: 60px;
+  }
+  .findAD-cont-4 {
+    font-size: 16px;
+    display: inline;
+    background: #f79425 0% 0% no-repeat padding-box;
+    border: 2px solid #ffffff;
+    opacity: 1;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 22%;
+    padding-left: 10%;
+    color: white;
+    margin: 5px 0;
+    margin-top: -12%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 355px) {
+  .navBar {
+    text-align: center;
+  }
+  .find {
+    padding-bottom: 2%;
+    float: none;
+  }
+  .home-logo {
+    margin-bottom: 5%;
+    float: none;
+    margin-left: 0;
+  }
+  .headline1 {
+    font: normal normal 300 43px/58px Roboto;
+  }
+  .headline2mobile {
+    font: normal normal normal 32px/37px Roboto;
+  }
+  .headline3 {
+    margin-top: 149px;
+    font: normal normal 500 16px/40px Roboto;
+  }
+  .findAD {
+    font-size: 14px;
+  }
+  .hide-forlp {
+    font-size: 105%;
+  }
+  .hearing {
+    font: normal normal 400 30px/70px Roboto;
+  }
+  .playNew {
+    left: 175%;
+    position: relative;
+    top: 68px;
+    width: 60%;
+  }
+  .hearingLoss {
+    font: normal normal 300 40px/48px Roboto;
+  }
+  .btn5 {
+    font-size: 15px;
+    padding: 19px;
+  }
+  .remember {
+    font: normal normal normal 46px/60px SignPainter;
+    padding: 5% 5%;
+  }
+  .logo-forMobile {
+    margin-left: 22%;
+  }
+  .btn6 {
+    font-size: 18px;
+  }
+  .findsearch {
+    /* padding-right: 10%; */
+    padding-bottom: 2%;
+    float: none;
+  }
+  .name,
+  .email,
+  .zip,
+  .searchBTN {
+    font: normal normal normal 17px/39px Arial;
+  }
+}
+
+.container-search .select {
+  background-color: #ffffff;
+}
+.container-search .unSelect {
+  background-color: #cec4c4;
+}
+
+#advance-search {
+  background: #f79425;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  color: white;
+  padding: 6px;
+  font-size: 12px;
+}
+
+p.advanceSearch span {
+  display: block;
+  text-align: center;
+}
+
+p.advanceSearch {
+  text-align: justify;
+  margin-bottom: 10px;
+  text-align: justify;
+  margin-bottom: 10px;
+  width: 42%;
+  float: left;
+}
+
+p.listviewData {
+  text-align: justify;
+  margin-bottom: 10px;
+  text-align: justify;
+  margin-bottom: 10px;
+  width: 42%;
+  float: left;
+}
+
+.cognivue-referred {
+  display: none;
+}
+.radius_con {
+  display: block;
+  width: 100%;
+}
+.no-data-dropdwn {
+  padding-top: 20px;
+  font-family: "Roboto";
+  font-size: 25px;
+  color: black;
+}
+.or-div {
+  color: white;
+  margin-bottom: 6px;
+}
+
+/******END******/

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="Cognivue is the first computerized cognitive test cleared by the FDA and was intuitively designed to eliminate testing variables. It identifies changes in brain function that could indicate an impairment using adaptive psychophysics. ">
+  <title>Earbrain Cognivue Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+  <div class="body">
+    <section class="roi-calculator initial-input">
+      <div class="roi-container">
+
+        <div class="admin-content">
+          <button id="1" type="submit" class="findAD"> Find An Audiologist</button>
+          <button id="2"  type="submit" class="findAD"> Cognivue Preferred</button>
+          <button id="3"  type="submit" class="findAD"> Other Audiologist</button>
+          <button id="4" type="submit" class="findAD"> CanNot Find The AUD</button>
+          <button id="5" type="submit" class="findAD"> Phone Number</button>
+
+          <div class="dialog-bg">
+            <p class="dialog-title">Activity Logs</p>
+            <div class="admin-section">
+            <!-- <div class="admin-section-header">
+              <p>Sr.No</p>
+              <p>Email Address</p>
+              <p>Date</p>
+              <p>Time</p>
+              <p>Practice Name</p>
+              <div class="clear"></div>
+            </div>
+            <div id="adminData"" class="admin-section-body">
+              
+              
+            </div> -->
+            <table id="example" class="display" cellspacing="0" width="100%"></table>  
+          </div>
+           
+
+          <div class="clear"></div>
+  
+            
+          </div>
+      </div>
+        </div>
+  
+    </section>
+  </div>
+
+  <!-- partial -->
+  <script src='../js/jquery.min.js'></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+  <script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+  <script src='../js/cognivuescript.js'></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  <script>
+  //   var dataSet = [{
+  //    "Latitude": 18.00,
+  //    "Longitude": 23.00,
+  //    "Name": "Pune"
+  //  }, {
+  //    "Latitude": 14.00,
+  //    "Longitude": 24.00,
+  //    "Name": "Mumbai"
+  //  }, {
+  //    "Latitude": 34.004654,
+  //    "Longitude": -4.005465,
+  //    "Name": "Delhi"
+  //  }, {
+  //    "Latitude": 23.004564,
+  //    "Longitude": 23.007897,
+  //    "Name": "Jaipur"
+  //  }];
+
+$("#1").click(function(){
+  getAjaxCall("CVEventFindAnAudiologist.json");
+});
+$("#2").click(function(){
+  getAjaxCall("CVEventCognivuePreferred.json");
+});
+$("#3").click(function(){
+  getAjaxCall("CVEventOtherAudiologist.json");
+});
+$("#4").click(function(){
+  getAjaxCall("CVEventCanNotFindTheAUD.json");
+});
+$("#5").click(function(){
+  getAjaxCall("CVEventPhoneNumber.json");
+});
+
+
+function getAjaxCall(callback){
+  $("#example").remove();
+  $("#example_wrapper").remove();
+  $(".admin-section").append('<table id="example" class="display" cellspacing="0" width="100%"></table> ');
+  var url = BASE_URL+callback;
+    var settings = {
+        "url": url,
+        "method": "GET",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      };
+      var dataSet = [];
+      $.ajax(settings).done(function (response) {
+        dataSet = [];
+        for (var key in response) {
+                    if (response.hasOwnProperty(key)) {
+
+                      var weekData = response[key];
+
+                      for (var weekKey in weekData) {
+                          if (weekData.hasOwnProperty(weekKey)) {
+                            var dateData = weekData[weekKey];
+                            
+                            for (var dateKey in dateData) {
+                                if (dateData.hasOwnProperty(dateKey)) {
+                                    
+                                  var idData = dateData[dateKey];
+                                  //console.log(idData);
+                                  for (var idKey in idData) {
+                                      if (idData.hasOwnProperty(idKey)) {
+                                          console.log(idData[idKey]);
+                                          dataSet.push(idData[idKey])
+                                      }
+                                  }
+                                }
+                            }
+                          }
+                      }
+                    }
+                }
+                renderData(dataSet);
+      });
+}
+  
+  
+   
+      function renderData(dataSet){
+        var my_columns = [];
+   
+          $.each( dataSet[0], function( key, value ) {
+              var my_item = {};
+              my_item.data = key;
+              my_item.title = key;
+              my_columns.push(my_item);
+          });
+          
+          $(document).ready(function() {
+            $('#example').DataTable({
+              data: dataSet,
+              "columns": my_columns
+            });
+          });
+      }
+   
+  </script>
+</body>
+
+</html>

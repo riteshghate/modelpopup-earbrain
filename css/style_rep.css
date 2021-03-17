@@ -1,0 +1,305 @@
+/* Media Query for Mobile Devices */
+
+@media (max-width: 480px) {
+    
+    .map-left-container {
+        width: 95%;
+        padding: 0% 1% 0 3%;
+    }
+    .zip-code {
+        text-align: left;
+        float: left;
+    }
+    .map-right-container {
+        width: 100%;
+    }
+    
+    #map {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        position: relative;
+        z-index: 200;
+    }
+    .map-right-container .findAD {
+        position: initial;
+        z-index: 10000;
+        right: 54px;
+        bottom: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px;
+        margin: 10px auto;
+        display: block;
+    }
+    #map {
+        position: relative;
+    }
+    .modal-content {
+        width: 20rem;
+        border-radius: 10px;
+    }
+    .full_list_container {
+        position: absolute;
+        bottom: 63px;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+        display: block;
+    }
+    .full_list_container .findAD {
+        color: black;
+        background-color: white;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 10px 16px;
+        cursor: pointer;
+    }
+    .slect-sate {
+        float: right;
+        text-align: left;
+    }
+    .back-to-map {
+        display: none;
+        padding: 12px 12px 0px 12px;
+        text-align: center;
+        color: #31c4f2;
+    }
+    .back-to-map .back_arrow {
+        vertical-align: middle;
+        margin-right: 9px;
+        margin-bottom: 5px;
+    }
+    .preffered-office {
+        color: #D4D4D4;
+        font-size: 15px;
+        margin: 4px 0px;
+        width: 50%;
+    }
+    .preffered-office1 {
+        float: left;
+    }
+    .preffered-office2 {
+        float: right;
+        text-align: right;
+    }
+    .zip_code_con .zicode_input{
+        width: 22%;
+    }
+    .map-left-container p{
+        color: black;
+    }
+    
+}
+
+
+/* Media Query for low resolution  Tablets, Ipads */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        /*         background-color: yellow; 
+ */
+    }
+    .map-left-container {
+        width: 35%;
+        padding: 0% 1% 0% 3%;
+    }
+    .map-right-container {
+        width: 61%;
+    }
+    
+    #map {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        position: absolute;
+        z-index: 200;
+    }
+    .map-right-container .findAD {
+        position: fixed;
+        z-index: 10000;
+        right: 54px;
+        bottom: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px;
+        margin: 0;
+    }
+    #map {
+        position: absolute;
+    }
+    .modal-content {
+        width: 30rem;
+    }
+    .zip-code {
+        text-align: left;
+        margin-top: 20px;
+    }
+    .full_list_container {
+        display: none;
+    }
+    .back-to-map {
+        display: none;
+    }
+    .preffered-office {
+        color: #D4D4D4;
+        font-size: 15px;
+        margin: 16px 0px;
+    }
+    
+}
+
+
+/* Media Query for Tablets Ipads portrait mode */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        /*         background-color: blue; 
+ */
+    }
+    .map-left-container {
+        width: 35%;
+        padding: 0% 1% 0% 3%;
+    }
+    .map-right-container {
+        width: 61%;
+    }
+   
+    #map {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        position: absolute;
+        z-index: 200;
+    }
+    .map-right-container .findAD {
+        position: fixed;
+        z-index: 10000;
+        right: 54px;
+        bottom: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px;
+        margin: 0;
+    }
+    #map {
+        position: absolute;
+    }
+    .modal-content {
+        width: 30rem;
+    }
+    .zip-code {
+        text-align: left;
+        margin-top: 20px;
+    }
+    .full_list_container {
+        display: none;
+    }
+    .back-to-map {
+        display: none;
+    }
+    .preffered-office {
+        color: #D4D4D4;
+        font-size: 15px;
+        margin: 16px 0px;
+    }
+    
+}
+
+
+/* Media Query for Laptops and Desktops */
+
+@media (min-width: 1025px) {
+    body {
+        /*         background-color: green; 
+ */
+    }
+    .map-left-container {
+        width: 18%;
+        padding: 0% 1% 0% 2%;
+    }
+    .map-right-container {
+        width: 79%;
+    }
+    
+    #map {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        position: absolute;
+        z-index: 200;
+    }
+    .map-right-container .findAD {
+        position: fixed;
+        z-index: 10000;
+        right: 54px;
+        bottom: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px;
+        margin: 0;
+    }
+    #map {
+        position: absolute;
+    }
+    .modal-content {
+        width: 50rem;
+        border-radius: 10px;
+    }
+    .zip-code {
+        text-align: left;
+        margin-top: 20px;
+    }
+    .full_list_container {
+        display: none;
+    }
+    .back-to-map {
+        display: none;
+    }
+    .preffered-office {
+        color: #D4D4D4;
+        font-size: 15px;
+        margin: 16px 0px;
+    }
+    
+}
+
+.map-ear-container {
+    min-width: 100% !important;
+}
+
+.map-left-container {
+    float: left;
+    overflow-y: scroll;
+}
+
+.map-right-container {
+    float: left;
+    position: relative;
+}
+
+.ear-container {
+    min-width: 1366px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.map-ear-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 200;
+}
+
+.zip-code {
+    color: #D4D4D4;
+    font-size: 16px;
+}
+.slect-sate{
+    margin-top: 17px;
+}
